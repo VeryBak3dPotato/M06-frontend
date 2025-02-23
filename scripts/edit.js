@@ -27,13 +27,15 @@ async function updateSong() {
         popularity: document.querySelector("#popularity").value,
         genre: document.querySelector("#genre").value ? document.querySelector("#genre").value.split(",") : []
     };
-    const response = await fetch(`http://localhost:3000/api/songs/${songID}`, {
+    const response = await fetch(`https://grand-pie-stingray.glitch.me/api/songs/${songID}`,
+      {
         method: "PUT",
         headers: {
-            "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(song)
-    });
+        body: JSON.stringify(song),
+      }
+    );
     if(response.ok) {
         alert("Song updated successfully");
     } else {
