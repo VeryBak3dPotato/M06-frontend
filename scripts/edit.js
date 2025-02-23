@@ -2,7 +2,8 @@ addEventListener('DOMContentLoaded', async function(){
     document.querySelector("#updateBtn").addEventListener("click", updateSong);
     const urlParam = new URLSearchParams(window.location.search);
     const songID = urlParam.get("id");
-    const response = await fetch(`http://localhost:3000/api/songs/${songID}`);
+    const response = await fetch(`https://grand-pie-stingray.glitch.me/api/songs/${songID}`
+    );
 
     if(response.ok) {
         let song = await response.json();

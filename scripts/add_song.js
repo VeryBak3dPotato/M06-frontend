@@ -12,13 +12,15 @@ async function addSong() {
         genre: document.querySelector('#genre').value ? document.querySelector('#genre').value.split(',') : []
     }
 
-    const response = await fetch('http://localhost:3000/api/songs', {
-        method: 'POST',
+    const response = await fetch("https://grand-pie-stingray.glitch.me/api/songs",
+      {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(song)
-    })
+        body: JSON.stringify(song),
+      }
+    );
 
     if (response.ok) {
         const results = await response.json();
