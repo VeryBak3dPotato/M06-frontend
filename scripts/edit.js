@@ -2,8 +2,7 @@ addEventListener('DOMContentLoaded', async function(){
     document.querySelector("#updateBtn").addEventListener("click", updateSong);
     const urlParam = new URLSearchParams(window.location.search);
     const songID = urlParam.get("id");
-    const response = await fetch(`https://grand-pie-stingray.glitch.me/api/songs/${songID}`
-    );
+    const response = await fetch(`https://positive-emerald-guan.glitch.me/api/songs/${songID}`);
 
     if(response.ok) {
         let song = await response.json();
@@ -27,8 +26,7 @@ async function updateSong() {
         popularity: document.querySelector("#popularity").value,
         genre: document.querySelector("#genre").value ? document.querySelector("#genre").value.split(",") : []
     };
-    const response = await fetch(`https://grand-pie-stingray.glitch.me/api/songs/${songID}`,
-      {
+    const response = await fetch(`https://positive-emerald-guan.glitch.me/api/songs/${songID}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

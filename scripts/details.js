@@ -1,8 +1,7 @@
 addEventListener('DOMContentLoaded', async function(){
     const urlParam = new URLSearchParams(window.location.search);
     const songID = urlParam.get("id");
-    const response = await fetch(`https://grand-pie-stingray.glitch.me/api/songs/${songID}`
-    );
+    const response = await fetch(`https://positive-emerald-guan.glitch.me/api/songs/${songID}`);
     const song = await response.json();
 
     let heading = "";

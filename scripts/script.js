@@ -1,6 +1,6 @@
 // Event listener
 addEventListener('DOMContentLoaded', async function(){
-  const response = await fetch("https://grand-pie-stingray.glitch.me/api/songs");
+  const response = await fetch("https://positive-emerald-guan.glitch.me/api/songs");
 //   const response = await fetch("http://localhost:3000/api/songs");
   const songs = await response.json();
 
